@@ -1,0 +1,19 @@
+<%- include('partials/header'); -%>
+<%console.log(articles)%>
+
+<% articles.forEach(element => { %>
+    <% console.log(element.title); %>
+<% }); %>
+
+
+
+<h1>Home</h1>
+
+<p><%=homeContent%></p>
+
+<% articles.forEach(element => { %>
+    <h1><%=element.title%></h1>
+    <p><%=element.body.substring(0, 100)+"..." %></p>
+    <a href="/articles/<%=element.title%>">Read More</a>
+<% }); %>
+<%- include('partials/footer'); -%>
