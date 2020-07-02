@@ -14,6 +14,6 @@
 <% articles.forEach(element => { %>
     <h1><%=element.title%></h1>
     <p><%=element.body.substring(0, 100)+"..." %></p>
-    <a href="/articles/<%=element.title%>">Read More</a>
+    <a href="/articles/<%=element.link%>">Read More</a>
 <% }); %>
 <%- include('partials/footer'); -%>
